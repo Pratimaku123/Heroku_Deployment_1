@@ -1,0 +1,6 @@
+OK: nse_native_trade_server trade_server.cfg running as tradesrv1 (expected:0 running:0)
+OK: nse_native_trade_server trade_server.cfg running as tradesrv2 (expected:0 running:0)
+OK: rms_server rms_server.cfg running as tradesrv1 (expected:0 running:0)
+OK: rms_server rms_server.cfg running as tradesrv2 (expected:0 running:0)
+OK: nse_tbt tfeed.cfg running as granite_trader (expected:0 running:0)
+OK: bse_eobi_bookbuilder bse.cfg /data/mdi_expiry.cfg /granite_trader_bse_mdi running as granite_trader (expected:0 running:0)

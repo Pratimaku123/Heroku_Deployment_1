@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>CHECK PROCESS STATUS</title>
+  </head>
+  <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">    </script>
+
+<div class="pos-f-t">
+    <nav class="navbar navbar-dark navbar-outline-light bg-dark">
+		    <div class="bg-dark p-4">
+			<h5 class="text-white h4">  SERVERS LIST  </h5>
+		    </div>
+   </nav>
+</div>
+<div class="alert alert-success" role="alert">
+  Choose   The    Options Given  Below.............
+</div>
+    <nav class="navbar navbar-light bg-light">
+        <br><br>
+        <form action='/status' method="post">
+            <div class="container-fluid">
+                <br><br>
+                <div class="row m-2" style="margin-bottom:20px;" >
+
+                    <form action='/status' method="post">
+                        
+                        {% for server in servers  %}
+                            
+                            <div class ="col-2" style="margin-bottom:20px;" >
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                     {% if (loop.index-1)%3 == 0 %}
+                                    <label  type="button" class="btn btn-outline-dark btn-lg"  style="width:50%">
+                                        <input type="checkbox"  name="checkbox_done" autocomplete="off" value={{server}}>&nbsp;{{server}}  
+                                    </label>
+                                    {% elif (loop.index-1)%3 ==1 %}
+                                    <label  type="button" class="btn btn-outline-dark btn-lg"  style="width:50%">
+                                        <input type="checkbox"  name="checkbox_done" autocomplete="off" value={{server}}>   {{server}}  
+                                    </label>
+                                    {% elif  (loop.index-1)%3 ==2 %}
+                                    <label  type="button" class="btn btn-outline-dark btn-lg"  style="width:50%">
+                                        <input type="checkbox"  name="checkbox_done" autocomplete="off" value={{server}}>   {{server}}  
+                                    </label>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        
+                        {% endfor %}
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-2">
+                            </div>
+			    <div class="col-4">
+                            <label  type="button" class="btn btn-secondary btn-lg active>  style="width:50%">
+				    <input type="checkbox"  name="checkbox_done" autocomplete="off" value='ALL'>&nbsp;ALL SERVERS
+                            </label>
+			    </div>								
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info btn-lg" style="width:50%" name="submit">Submit
+				</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+           </div>
+       
+    </nav>
+
+ </body>
+</html>

@@ -1,0 +1,5 @@
+OK: nse_tbt tfeed.cfg running as epsilon_trader (expected:0 running:0)
+OK: nse_native_trade_server trade_server.cfg running as tradesrv1 (expected:0 running:0)
+OK: rms_server rms_server.cfg running as tradesrv1 (expected:0 running:0)
+OK: ./nse_helper_master  running as epsilon_trader (expected:0 running:0)
+OK: ./nse_helper_slave  running as epsilon_trader (expected:0 running:0)

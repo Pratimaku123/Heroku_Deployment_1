@@ -1,0 +1,6 @@
+OK: nse_native_trade_server trade_server.cfg running as tradesrv1 (expected:0 running:0)
+OK: nse_native_trade_server trade_server.cfg running as tradesrv2 (expected:0 running:0)
+OK: new_options_trader FO 13  running as opt_trader (expected:0 running:0)
+OK: rms_server rms_server.cfg running as tradesrv1 (expected:0 running:0)
+OK: rms_server rms_server.cfg running as tradesrv2 (expected:0 running:0)
+OK: nse_tbt tfeed.cfg running as opt_trader (expected:0 running:0)
